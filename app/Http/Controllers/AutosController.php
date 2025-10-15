@@ -27,7 +27,7 @@ class AutosController extends Controller
     {
         //17-10
         $auto = new Auto();
-        $auto->patente = $request->patente;
+        $auto->patentes = $request->patente;
         $auto->modelo = $request->modelo;
         $auto->precio = $request->precio;
         $auto->marca_id= $request->marca;

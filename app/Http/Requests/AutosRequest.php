@@ -9,11 +9,6 @@ class AutosRequest extends FormRequest
     /**
      * Determine if the user is authorized to make this request.
      */
-    public function authorize(): bool
-    {
-        return false;
-    }
-
     /**
      * Get the validation rules that apply to the request.
      *
@@ -23,7 +18,7 @@ class AutosRequest extends FormRequest
     {
         return [
             //17-10
-            'patente' => 'require|size:6|unique:autos,patente',
+            'patente' => 'required|size:6|unique:autos,patentes',
             'modelo' => 'required|min:3',
             'precio' => 'required|integer|gte:1',
         ];
